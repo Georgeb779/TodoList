@@ -33,7 +33,7 @@ h1 {
   color: var(--mainbg);
   transition: color 0.2s ease-in;
 
-  padding-top: 14px;
+  padding-top: 8px;
 }
 
 h1 button {
@@ -243,7 +243,7 @@ button:active {
     color: var(--mainbg);
     transition: color 0.2s ease-in;
 
-    padding-top: 14px;
+    padding-top: 8px;
   }
 
   h1 button {
