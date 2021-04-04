@@ -96,8 +96,7 @@ input {
   cursor: grab;
 }
 
-.todo-list{
-
+.todo-list {
   padding: 10px;
   font-size: 14.5px;
   transition: color 0.2s ease-in;
@@ -204,7 +203,7 @@ button:active {
   color: var(--veryDarkGrayishBlue);
   transition: color 0.2s ease-in;
   align-items: center;
-  height:25px;
+  height: 19px;
   background-color: var(--mainbg);
   border-top: 2px solid rgb(238, 233, 233);
   margin: 5px 30px 5px 30px;
@@ -339,8 +338,7 @@ button:active {
     width: 590px;
     overflow: auto;
     background-color: var(--mainbg);
-    border:1px solid #dfd9d9;
-
+    border: 1px solid #dfd9d9;
   }
 
   .filter-todo {
@@ -355,9 +353,9 @@ button:active {
     justify-content: space-between;
     padding: 15px;
     font-size: 16px;
+    height: 19px;
     color: var(--veryDarkGrayishBlue);
     transition: color 0.2s ease-in;
-
     background-color: var(--mainbg);
     border-top: 2px solid rgb(238, 233, 233);
     margin: 5px 30px 5px 30px;

@@ -85,7 +85,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height:25px;
+  height:19px;;
   padding: 15px;
   font-size: 14px;
   color: var(--DarkGrayishBlue);
@@ -235,6 +235,7 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 15px;
+    height:19px;;
     font-size: 16px;
     color: var(--veryDarkGrayishBlue);
     background-color: var(--VeryDarkDesaturatedBlue);
