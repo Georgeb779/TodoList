@@ -22,7 +22,7 @@ body {
 }
 
 form {
-  padding-top: 40px;
+  padding-top: 10px;
 }
 
 h1 {
@@ -66,9 +66,9 @@ input {
 }
 
 .todo-add button {
-  width: 30px;
-  height: 30px;
-  font-size: 17px;
+  width: 28px;
+  height: 28px;
+  font-size: 13.5px;
   margin-left: 8px;
   border-radius: 50%;
   border: none;
@@ -94,6 +94,16 @@ input {
   border: 1px;
   cursor: -webkit-grab;
   cursor: grab;
+}
+
+.todo-list{
+
+  padding: 10px;
+  font-size: 14.5px;
+  transition: color 0.2s ease-in;
+  display: block;
+  word-wrap: break-word;
+  max-width: 90%;
 }
 
 .todo li:active {
@@ -193,7 +203,8 @@ button:active {
   font-size: 14px;
   color: var(--veryDarkGrayishBlue);
   transition: color 0.2s ease-in;
-
+  align-items: center;
+  height:25px;
   background-color: var(--mainbg);
   border-top: 2px solid rgb(238, 233, 233);
   margin: 5px 30px 5px 30px;
@@ -221,7 +232,7 @@ button:active {
   }
 
   form {
-    padding-top: 40px;
+    padding-top: 10px;
   }
 
   h1 {
@@ -268,9 +279,9 @@ button:active {
   }
 
   .todo-add button {
-    width: 30px;
-    height: 30px;
-    font-size: 17px;
+    width: 28px;
+    height: 28px;
+    font-size: 13.5px;
     margin-left: 8px;
     border-radius: 50%;
     border: none;
