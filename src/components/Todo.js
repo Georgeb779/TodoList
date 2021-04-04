@@ -35,6 +35,7 @@ function Todo({ text, todos, setTodos, todo, complete }) {
   return (
     <div className="todo">
       <button
+      aria-label="check or uncheck todo"
         style={complete ? checkBackground : null}
         onClick={checkHandler}
         className="complete-btn"
@@ -50,7 +51,7 @@ function Todo({ text, todos, setTodos, todo, complete }) {
         {text}
       </li>
 
-      <button onClick={deleteHandler} className="trash-btn">
+      <button aria-label="delete todo item" onClick={deleteHandler} className="trash-btn">
         <FontAwesomeIcon icon={faTimes} />
       </button>
     </div>

@@ -75,10 +75,10 @@ function App() {
     <div className="App">
       <header>
         <h1>
-          TO DO{" "}
-          <button onClick={() => setDarkMode((prevMode) => !prevMode)}>
-            <FontAwesomeIcon icon={darkMode === false ? faMoon : faSun} />{" "}
-          </button>{" "}
+          TO DO
+          <button aria-label="change to dark or light mode "onClick={() => setDarkMode((prevMode) => !prevMode)}>
+            <FontAwesomeIcon icon={darkMode === false ? faMoon : faSun} />
+          </button>
         </h1>
 
         <Form
@@ -93,6 +93,7 @@ function App() {
           setDarkMode={setDarkMode}
         />
       </header>
+
     </div>
   );
 }
