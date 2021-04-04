@@ -10,11 +10,25 @@ function App() {
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
   const [status, setStatus] = useState("all");
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(getMode);
   const [filterbystatus, setfilterbystatus] = useState([]);
 
-  // funtions
-  // save in local storage
+  useEffect(() => {
+    localStorage.setItem("dark", JSON.stringify(darkMode));
+  }, [darkMode]);
+
+  function getMode() {
+    const savedmode = JSON.parse(localStorage.getItem("dark"));
+    return savedmode || false;
+  }
+
+  if (darkMode === false) {
+    const body = document.body;
+    body.classList.remove("dark-mode");
+  } else {
+    const body = document.body;
+    body.classList.add("dark-mode");
+  }
 
   const saveLocalStorage = () => {
     localStorage.setItem("todos", JSON.stringify(todos));
@@ -30,18 +44,7 @@ function App() {
   };
 
   // useEffect
-
-  useEffect(() => {
-    const body = document.body;
-
-    // If dark mode is enabled - adds classes to update dark-mode styling.
-    // Else, removes and styling is as normal.
-    if (darkMode === true) {
-      body.classList.add("dark-mode");
-    } else {
-      body.classList.remove("dark-mode");
-    }
-  }, [darkMode]);
+  // save in local storage
 
   useEffect(() => {
     getLocalStorage();
@@ -73,11 +76,7 @@ function App() {
       <header>
         <h1>
           TO DO{" "}
-          <button
-            onClick={() =>
-              darkMode === false ? setDarkMode(true) : setDarkMode(false)
-            }
-          >
+          <button onClick={() => setDarkMode((prevMode) => !prevMode)}>
             <FontAwesomeIcon icon={darkMode === false ? faMoon : faSun} />{" "}
           </button>{" "}
         </h1>

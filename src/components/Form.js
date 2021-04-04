@@ -12,7 +12,7 @@ const Form = ({
   setStatus,
   filterbystatus,
   status,
-  darkMode
+  darkMode,
 }) => {
   const writeText = (e) => {
     setInputText(e.target.value);
@@ -25,7 +25,7 @@ const Form = ({
         icon: "error",
         title: "Oops...",
         text: "You should add something to do!",
-        background:darkMode?'hsl(235, 24%, 19%)':'white'
+        background: darkMode ? "hsl(235, 24%, 19%)" : "white",
       });
     } else {
       setTodos([
@@ -52,18 +52,15 @@ const Form = ({
   let items = todos.filter((todo) => todo.completed === false);
   let itemLeft = items.length;
 
-
   let statuActivate = {
     color: "hsl(220, 98%, 61%)",
     fontWeight: "bold",
   };
 
-  
   let statuActivateDark = {
     color: "hsl(234, 39%, 85%)",
     fontWeight: "bold",
   };
-
 
   return (
     <form action="">
@@ -100,9 +97,14 @@ const Form = ({
             className="btn-inline"
             type="button"
             value="all"
-            style={status === "all" && darkMode === false ? statuActivate : status === "all" && darkMode === true ? statuActivateDark:null }
+            style={
+              status === "all" && darkMode === false
+                ? statuActivate
+                : status === "all" && darkMode === true
+                ? statuActivateDark
+                : null
+            }
           >
-
             All
           </button>
           <button
@@ -110,7 +112,13 @@ const Form = ({
             className="btn-inline"
             type="button"
             value="completed"
-            style={status === "completed" && darkMode === false? statuActivate : status === "completed" && darkMode === true ? statuActivateDark:null }
+            style={
+              status === "completed" && darkMode === false
+                ? statuActivate
+                : status === "completed" && darkMode === true
+                ? statuActivateDark
+                : null
+            }
           >
             Completed
           </button>
@@ -119,7 +127,13 @@ const Form = ({
             className="btn-inline"
             type="button"
             value="unCompleted"
-            style={status === "unCompleted" && darkMode === false? statuActivate : status === "unCompleted" && darkMode === true ? statuActivateDark:null}
+            style={
+              status === "unCompleted" && darkMode === false
+                ? statuActivate
+                : status === "unCompleted" && darkMode === true
+                ? statuActivateDark
+                : null
+            }
           >
             Active
           </button>
