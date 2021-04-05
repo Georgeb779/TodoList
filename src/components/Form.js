@@ -62,6 +62,16 @@ const Form = ({
     fontWeight: "bold",
   };
 
+  let centerOwnwe = {
+    placeSelf: "center",
+    paddingTop: "12px",
+    background: "0 0!important",
+    border: "none",
+    color:'hsl(235, 19%, 35%)',
+    transition: "color .2s ease-in",
+    fontSize: "13px",
+  };
+
   return (
     <form action="">
       <div className="todo-add">
@@ -72,7 +82,11 @@ const Form = ({
           placeholder="Create a new todo"
           className="input-text"
         />
-        <button aria-label="add a new todo" onClick={submiTodoHandler} type="submit">
+        <button
+          aria-label="add a new todo"
+          onClick={submiTodoHandler}
+          type="submit"
+        >
           <FontAwesomeIcon icon={faPlus} />
         </button>
       </div>
@@ -86,14 +100,19 @@ const Form = ({
       <div className="filter-todo">
         <div className="sub-section">
           <p>{itemLeft} item left</p>
-          <button aria-label="clear all todo"onClick={clearAll} className="btn-inline" type="button">
+          <button
+            aria-label="clear all todo"
+            onClick={clearAll}
+            className="btn-inline"
+            type="button"
+          >
             Clear All
           </button>
         </div>
 
         <div className="section-filter">
           <button
-          aria-label="All to do items"
+            aria-label="All to do items"
             onClick={statusHandler}
             className="btn-inline"
             type="button"
@@ -109,7 +128,7 @@ const Form = ({
             All
           </button>
           <button
-          aria-label="completed todo items"
+            aria-label="completed todo items"
             onClick={statusHandler}
             className="btn-inline"
             type="button"
@@ -125,7 +144,7 @@ const Form = ({
             Completed
           </button>
           <button
-          aria-label="unCompleted todo items"
+            aria-label="unCompleted todo items"
             onClick={statusHandler}
             className="btn-inline"
             type="button"
@@ -140,6 +159,9 @@ const Form = ({
           >
             Active
           </button>
+        </div>
+        <div style={centerOwnwe}>
+          <p >GeorgeDev</p>
         </div>
       </div>
     </form>
