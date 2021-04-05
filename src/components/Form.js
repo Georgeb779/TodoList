@@ -65,6 +65,7 @@ const Form = ({
   let centerOwnwe = {
     placeSelf: "center",
     paddingTop: "12px",
+    paddingBottom: '12px',
     background: "0 0!important",
     border: "none",
     color:'hsl(235, 19%, 35%)',
