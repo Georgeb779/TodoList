@@ -1,17 +1,19 @@
-// import "./styles/App.css";
 import React, { useState, useEffect } from "react";
 import Form from "./components/Form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
-// states
-
 function App() {
+  // Declaring the states
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
   const [status, setStatus] = useState("all");
   const [darkMode, setDarkMode] = useState(getMode);
   const [filterbystatus, setfilterbystatus] = useState([]);
+
+  //useEffect area
+  
+  //setting dark mode
 
   useEffect(() => {
     localStorage.setItem("dark", JSON.stringify(darkMode));
@@ -43,15 +45,14 @@ function App() {
     }
   };
 
-  // useEffect
   // save in local storage
 
   useEffect(() => {
     getLocalStorage();
   }, []);
 
+  //filter item state: completed, unCompleted, All
   useEffect(() => {
-    // filter
     const filterHandler = () => {
       switch (status) {
         case "completed":
@@ -65,7 +66,6 @@ function App() {
           break;
       }
     };
-
     filterHandler();
     saveLocalStorage();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -76,7 +76,10 @@ function App() {
       <header>
         <h1>
           TO DO
-          <button aria-label="change to dark or light mode "onClick={() => setDarkMode((prevMode) => !prevMode)}>
+          <button
+            aria-label="change to dark or light mode "
+            onClick={() => setDarkMode((prevMode) => !prevMode)}
+          >
             <FontAwesomeIcon icon={darkMode === false ? faMoon : faSun} />
           </button>
         </h1>
@@ -93,7 +96,6 @@ function App() {
           setDarkMode={setDarkMode}
         />
       </header>
-
     </div>
   );
 }

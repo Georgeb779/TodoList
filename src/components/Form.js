@@ -14,9 +14,12 @@ const Form = ({
   status,
   darkMode,
 }) => {
+  // write text in the inpunt
   const writeText = (e) => {
     setInputText(e.target.value);
   };
+
+  //Here we used sweetalert2 to show up the alerts
 
   const submiTodoHandler = (e) => {
     e.preventDefault();
@@ -40,6 +43,7 @@ const Form = ({
     }
   };
 
+  //handle clear all
   const clearAll = (e) => {
     e.preventDefault();
     setTodos((todos = []));
@@ -49,9 +53,12 @@ const Form = ({
     setStatus(e.target.value);
   };
 
+  //handle how many items we have left 
+
   let items = todos.filter((todo) => todo.completed === false);
   let itemLeft = items.length;
 
+  //styles
   let statuActivate = {
     color: "hsl(220, 98%, 61%)",
     fontWeight: "bold",
@@ -65,10 +72,10 @@ const Form = ({
   let centerOwnwe = {
     placeSelf: "center",
     paddingTop: "12px",
-    paddingBottom: '12px',
+    paddingBottom: "12px",
     background: "0 0!important",
     border: "none",
-    color:'hsl(235, 19%, 35%)',
+    color: "hsl(235, 19%, 35%)",
     transition: "color .2s ease-in",
     fontSize: "13px",
   };
@@ -162,7 +169,7 @@ const Form = ({
           </button>
         </div>
         <div style={centerOwnwe}>
-          <p >GeorgeDev</p>
+          <p>GeorgeDev</p>
         </div>
       </div>
     </form>

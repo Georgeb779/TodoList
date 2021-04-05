@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faCircle, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 function Todo({ text, todos, setTodos, todo, complete }) {
+  //handlers
   const deleteHandler = (e) => {
     e.preventDefault();
     setTodos(todos.filter((el) => el.id !== todo.id));
@@ -22,6 +23,8 @@ function Todo({ text, todos, setTodos, todo, complete }) {
     );
   };
 
+  //styles
+
   let completeStyle = {
     fontStyle: "italic",
     color: "#cdcdcd",
@@ -35,7 +38,7 @@ function Todo({ text, todos, setTodos, todo, complete }) {
   return (
     <div className="todo">
       <button
-      aria-label="check or uncheck todo"
+        aria-label="check or uncheck todo"
         style={complete ? checkBackground : null}
         onClick={checkHandler}
         className="complete-btn"
@@ -51,7 +54,11 @@ function Todo({ text, todos, setTodos, todo, complete }) {
         {text}
       </li>
 
-      <button aria-label="delete todo item" onClick={deleteHandler} className="trash-btn">
+      <button
+        aria-label="delete todo item"
+        onClick={deleteHandler}
+        className="trash-btn"
+      >
         <FontAwesomeIcon icon={faTimes} />
       </button>
     </div>
