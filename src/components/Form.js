@@ -164,7 +164,7 @@ const Form = ({
           </button>
         </div>
         <div style={centerOwnwe}>
-          <a href="https://github.com/Georgeb779" target="_blank" rel="noreferrer">GeorgeDev</a>.
+          <a href="https://github.com/Georgeb779" target="_blank" rel="noreferrer">GeorgeDev</a>
         </div>
       </div>
     </form>
