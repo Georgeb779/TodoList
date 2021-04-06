@@ -1,8 +1,6 @@
 import React from "react";
 import TodoList from "./TodoList";
 import Swal from "sweetalert2";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 const Form = ({
   setInputText,
@@ -53,7 +51,7 @@ const Form = ({
     setStatus(e.target.value);
   };
 
-  //handle how many items we have left 
+  //handle how many items we have left
 
   let items = todos.filter((todo) => todo.completed === false);
   let itemLeft = items.length;
@@ -71,8 +69,7 @@ const Form = ({
 
   let centerOwnwe = {
     placeSelf: "center",
-    paddingTop: "12px",
-    paddingBottom: "12px",
+    paddingTop: "5px",
     background: "0 0!important",
     border: "none",
     color: "hsl(235, 19%, 35%)",
@@ -95,7 +92,6 @@ const Form = ({
           onClick={submiTodoHandler}
           type="submit"
         >
-          <FontAwesomeIcon icon={faPlus} />
         </button>
       </div>
 

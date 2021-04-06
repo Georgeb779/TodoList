@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/App.css';
-import './styles/index.css';
+import './styles/light.css';
 import './styles/dark.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
