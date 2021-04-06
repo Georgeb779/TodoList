@@ -91,8 +91,7 @@ const Form = ({
           aria-label="add a new todo"
           onClick={submiTodoHandler}
           type="submit"
-        >
-        </button>
+        ></button>
       </div>
 
       <TodoList
@@ -165,7 +164,7 @@ const Form = ({
           </button>
         </div>
         <div style={centerOwnwe}>
-          <p>GeorgeDev</p>
+          <a href="https://github.com/Georgeb779" target="_blank" rel="noreferrer">GeorgeDev</a>.
         </div>
       </div>
     </form>
