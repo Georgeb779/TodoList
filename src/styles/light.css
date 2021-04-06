@@ -109,11 +109,7 @@ input {
   transition: color 0.2s ease-in;
   border: 1px solid #dfd9d9;
 }
-.todo-container::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-  display: none;
-}
+
 .complete-btn {
   height: 21.5px;
   width: 20.5px;
@@ -281,7 +277,7 @@ button:active {
   }
   .sub-section {
     display: flex;
-    width: 465px;
+    width: 468px;
     flex-direction: row;
     justify-content: space-between;
     padding: 15px;
